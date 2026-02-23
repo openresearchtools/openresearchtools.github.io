@@ -4,19 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>openresearchtools</title>
-    <meta name="description" content="openresearchtools is a community-driven research tools platform and app collection for analysis workflows.">
+    <meta name="description" content="Open-source, local-first AI systems and analysis tools for structured, searchable datasets.">
     <link rel="stylesheet" href="assets/styles.css">
-    <script src="assets/script.js" defer></script>
   </head>
   <body>
-    <header class="site-header">
-      <div class="header-inner">
+    <header class="banner" aria-label="Site header">
+      <div class="shell banner__inner">
         <a class="brand" href="index.html" aria-label="openresearchtools home">openresearchtools</a>
-        <nav class="header-nav" aria-label="Primary">
-          <a href="#tools">Products</a>
-          <a href="Privacy-Policy.html" target="_blank" rel="privacy-policy">Cookie &amp; Privacy Policy</a>
-        </nav>
-        <a class="github-pill" href="https://github.com/openresearchtools" target="_blank" rel="me noopener" aria-label="openresearchtools GitHub">
+        <a class="icon-pill" href="https://github.com/openresearchtools" target="_blank" rel="me noopener" aria-label="openresearchtools GitHub">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M12 .5A12 12 0 0 0 0 12.7c0 5.4 3.4 10 8 11.7.6.1.8-.3.8-.6v-2c-3.3.7-4-1.5-4-1.5-.6-1.4-1.5-1.8-1.5-1.8-1.2-.8.1-.8.1-.8 1.3.1 2 .9 2 .9 1.2 2 3.1 1.4 3.8 1.1.1-.9.5-1.4.8-1.7-2.7-.3-5.6-1.4-5.6-6.1 0-1.4.5-2.6 1.3-3.6-.1-.3-.6-1.6.1-3.3 0 0 1-.3 3.4 1.3a11.5 11.5 0 0 1 6.2 0C18.6 4 19.7 4.3 19.7 4.3c.7 1.7.2 3 .1 3.3.8 1 1.3 2.2 1.3 3.6 0 4.7-2.9 5.8-5.6 6.1.6.5.9 1.2.9 2.4v3.5c0 .3.2.7.8.6 4.7-1.7 8-6.3 8-11.7A12 12 0 0 0 12 .5z"/>
           </svg>
@@ -25,106 +20,77 @@
     </header>
 
     <main>
-      <section class="intro">
-        <p class="eyebrow">Research software, rebuilt.</p>
-        <h1>Open, practical tools for faster research work.</h1>
-        <p>
-          We keep the content and links you already use, and rebuild the interface so
-          it is cleaner, lighter, and ready to grow into more product windows.
-        </p>
+      <section class="shell hero" aria-label="Introduction">
+        <div class="hero__copy">
+          <p class="kicker">Our vision</p>
+          <h1 class="sr-only">Open Research Tools</h1>
+          <p class="hero__summary">Open Research Tools is an open-source project building local-first AI systems that convert unstructured sources (e.g., audio, images, web content, and scholarly articles) into structured, searchable datasets, alongside analysis tools to extract and analyse data at scale.</p>
+        </div>
       </section>
 
-      <section id="tools" class="tools-grid" aria-label="Tool windows">
-        <article class="tool-cube" style="--hue:205">
-          <div class="tool-cube-shell">
-            <header class="window-topbar">
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <h2>Our Vision</h2>
-            </header>
-            <div class="tool-content">
-              <p>
-                <strong>Open Research Tools (openresearchtools.com)</strong> is a community-driven, open-source platform that connects researchers and standardises how unstructured material such as <strong>video, audio, web content and scholarly articles</strong> are discovered, converted and analysed. Our aim is simple but ambitious: to bridge the gap between qualitative and quantitative data making it <strong>searchable, comparable and quantifiable using advanced research methods</strong>,
-                so researchers can generate defensible insights into psychology, human
-                behaviour, and wider sociological and economic questions.
-              </p>
-              <figure>
-                <img src="assets/images/vision.png" alt="openresearchtools vision graphic">
-              </figure>
+      <section id="tools" class="shell grid" aria-label="Tools and projects">
+        <article class="card" aria-label="Transcribe Offline v1.2">
+          <header class="card__top">
+            <span class="dot" aria-hidden="true"></span>
+            <span class="dot" aria-hidden="true"></span>
+            <span class="dot" aria-hidden="true"></span>
+            <h2 class="card__title">Transcribe Offline v1.2</h2>
+          </header>
+          <div class="card__body">
+            <figure class="frame">
+              <img src="assets/images/screenshot.png" alt="Transcribe Offline interface preview">
+            </figure>
+            <p>Transcribe Offline is a free, open source desktop app that runs entirely on your own hardware, producing high-quality transcripts, speaker-attributed text (diarisation) and timestamped subtitles without sending audio to any cloud service or paying per-minute fees. It supports graphics accelaration on MacOS, but it also runs on lower spec Windows and Linux machines. Download Transcribe Offline v1.2 for:</p>
+            <div class="actions" role="group" aria-label="Transcribe Offline downloads">
+              <a class="btn" href="https://github.com/openresearchtools/transcribeoffline/tree/main/macOS">MacOS</a>
+              <a class="btn" href="https://github.com/openresearchtools/transcribeoffline/tree/main/Windows">Windows</a>
+              <a class="btn btn--muted" href="https://github.com/openresearchtools/transcribeoffline/tree/main/Linux">Ubuntu Linux</a>
+              <a class="btn btn--muted" href="https://github.com/openresearchtools/transcribeoffline">Learn More</a>
             </div>
           </div>
         </article>
 
-        <article class="tool-cube" style="--hue:224">
-          <div class="tool-cube-shell">
-            <header class="window-topbar">
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <h2>Transcribe Offline v1.2</h2>
-            </header>
-            <div class="tool-content">
-              <figure>
-                <img src="assets/images/screenshot.png" alt="Transcribe Offline interface preview">
-              </figure>
-              <p>
-                <strong>Transcribe Offline</strong> is a <strong> free, open source desktop app </strong> that runs <strong>entirely on your own hardware</strong>, producing high-quality transcripts, <strong>speaker-attributed text (diarisation)</strong> and <strong>timestamped subtitles</strong> without sending audio to any cloud service or paying per-minute fees.
-                It supports <strong>graphics accelaration on MacOS</strong>, but it also runs on lower spec Windows and Linux machines.
-                <strong>Download Transcribe Offline v1.2 for:</strong>
-              </p>
-              <div class="cta-row" role="group" aria-label="Transcribe Offline downloads">
-                <a class="cta-btn" href="https://github.com/openresearchtools/transcribeoffline/tree/main/macOS">MacOS</a>
-                <a class="cta-btn" href="https://github.com/openresearchtools/transcribeoffline/tree/main/Windows">Windows</a>
-                <a class="cta-btn" href="https://github.com/openresearchtools/transcribeoffline/tree/main/Linux">Ubuntu Linux</a>
-                <a class="cta-btn cta-btn--subtle" href="https://github.com/openresearchtools/transcribeoffline">Learn More</a>
-              </div>
+        <article class="card" aria-label="Engine">
+          <header class="card__top">
+            <span class="dot" aria-hidden="true"></span>
+            <span class="dot" aria-hidden="true"></span>
+            <span class="dot" aria-hidden="true"></span>
+            <h2 class="card__title">Engine</h2>
+          </header>
+          <div class="card__body">
+            <p>OpenResearchtools Engine is an early-stage local AI runtime built to be embedded directly into applications, with a small footprint and one consistent stack for chat, vision, embeddings, reranking, transcription/diarisation, and PDF-to-markdown workflows. It is largely based on open-source Llama.cpp and ships as a native in-process runtime.</p>
+            <p>We also ship a Rust CLI example to accelerate application embedding.</p>
+            <figure class="frame">
+              <picture>
+                <source srcset="assets/images/engine.webp" type="image/webp">
+                <img src="assets/images/engine.png" alt="OpenResearchtools Engine graphic" loading="lazy" decoding="async">
+              </picture>
+            </figure>
+            <div class="actions" role="group" aria-label="OpenResearchtools Engine links">
+              <a class="btn" href="https://github.com/openresearchtools/engine" target="_blank" rel="noopener">Learn More</a>
             </div>
           </div>
         </article>
 
-        <article class="tool-cube" style="--hue:178">
-          <div class="tool-cube-shell">
-            <header class="window-topbar">
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <h2>Analysis Lab v2 (Coming Soon)</h2>
-            </header>
-            <div class="tool-content">
-              <p>
-                This cube is ready for your next open research utility.
-                Add text, links and screenshots here when your next project is ready.
-              </p>
-              <p class="placeholder-note">Window placeholder intentionally empty for future content.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="tool-cube" style="--hue:196">
-          <div class="tool-cube-shell">
-            <header class="window-topbar">
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <h2>Knowledge Stack v3 (Coming Soon)</h2>
-            </header>
-            <div class="tool-content">
-              <p>
-                This card is a second placeholder for a future product and can be
-                configured without changing the page structure.
-              </p>
-              <p class="placeholder-note">Add imagery and action links when available.</p>
-            </div>
+        <article class="card" aria-label="Upcoming window">
+          <header class="card__top">
+            <span class="dot" aria-hidden="true"></span>
+            <span class="dot" aria-hidden="true"></span>
+            <span class="dot" aria-hidden="true"></span>
+            <h2 class="card__title">Upcoming Window</h2>
+          </header>
+          <div class="card__body">
+            <p>This slot is ready for your next launch. Keep the visual system consistent while you add real content.</p>
+            <p class="note">No links are required yet.</p>
           </div>
         </article>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="footer-inner">
-        <small>© 2025 openresearchtools</small>
-        <a href="Privacy-Policy.html" target="_blank" rel="privacy-policy">Cookie &amp; Privacy Policy</a>
+    <footer class="footer" aria-label="Site footer">
+      <div class="shell footer__inner">
+        <small>&copy; 2025 openresearchtools</small>
+        <a class="footer__btn" href="Privacy-Policy.html">Cookie &amp; Privacy Policy</a>
       </div>
     </footer>
   </body>
