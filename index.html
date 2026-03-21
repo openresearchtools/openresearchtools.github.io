@@ -22,30 +22,30 @@
     <main>
       <section class="shell hero" aria-label="Introduction">
         <div class="hero__copy">
-          <p class="kicker">Our vision</p>
+          <p class="kicker">Our mission</p>
           <h1 class="sr-only">Open Research Tools</h1>
-          <p class="hero__summary">Open Research Tools is an open-source project building local-first AI systems that convert unstructured sources (e.g., audio, images, web content, and scholarly articles) into structured, searchable datasets, alongside analysis tools to extract and analyse data at scale.</p>
+          <p class="hero__summary">Our mission is to build local-first and open-source AI systems that convert unstructured sources (e.g., audio, images, web content, and scholarly articles) into structured, searchable datasets, alongside analysis tools to extract and analyse data at scale.</p>
         </div>
       </section>
 
       <section id="tools" class="shell grid" aria-label="Tools and projects">
-        <article class="card" aria-label="Transcribe Offline v1.2">
+        <article class="card" aria-label="Transcribe Offline v2.0">
           <header class="card__top">
             <span class="dot" aria-hidden="true"></span>
             <span class="dot" aria-hidden="true"></span>
             <span class="dot" aria-hidden="true"></span>
-            <h2 class="card__title">Transcribe Offline v1.2</h2>
+            <h2 class="card__title">Transcribe Offline v2.0</h2>
           </header>
           <div class="card__body">
             <figure class="frame">
-              <img src="assets/images/screenshot.png" alt="Transcribe Offline interface preview">
+              <img src="assets/images/transcribeoffline-demo.png" alt="Transcribe Offline interface preview">
             </figure>
-            <p>Transcribe Offline is a free, open source desktop app that runs entirely on your own hardware, producing high-quality transcripts, speaker-attributed text (diarisation) and timestamped subtitles without sending audio to any cloud service or paying per-minute fees. It supports graphics accelaration on MacOS, but it also runs on lower spec Windows and Linux machines. Download Transcribe Offline v1.2 for:</p>
+            <p>Transcribe Offline is a free, open-source desktop app that runs entirely on your own hardware for both file transcription and true live transcription, including live speaker diarisation and subtitle export—no cloud uploads or per-minute fees. It supports GPU acceleration on MacOS* and Windows*, but still runs on lower-end devices.</p>
+            <p>Download Transcribe Offline v2.0 for:</p>
             <div class="actions" role="group" aria-label="Transcribe Offline downloads">
-              <a class="btn" href="https://github.com/openresearchtools/transcribeoffline/tree/main/macOS">MacOS</a>
-              <a class="btn" href="https://github.com/openresearchtools/transcribeoffline/tree/main/Windows">Windows</a>
-              <a class="btn btn--muted" href="https://github.com/openresearchtools/transcribeoffline/tree/main/Linux">Ubuntu Linux</a>
-              <a class="btn btn--muted" href="https://github.com/openresearchtools/transcribeoffline">Learn More</a>
+              <a class="btn" href="https://github.com/openresearchtools/transcribeoffline/releases/download/2.0/transcribe-offline-macos-arm64.dmg">MacOS*</a>
+              <a class="btn" href="https://github.com/openresearchtools/transcribeoffline/releases/download/2.0/Transcribe-Offline-windows-x64.exe">Windows*</a>
+              <a class="btn btn--muted" href="https://github.com/openresearchtools/transcribeoffline">Learn more</a>
             </div>
           </div>
         </article>
@@ -58,40 +58,154 @@
             <h2 class="card__title">Engine</h2>
           </header>
           <div class="card__body">
-            <p>OpenResearchtools Engine is an early-stage local AI runtime built to be embedded directly into applications, with a small footprint and one consistent stack for chat, vision, embeddings, reranking, transcription/diarisation, and PDF-to-markdown workflows. It is largely based on open-source Llama.cpp and ships as a native in-process runtime.</p>
-            <p>We also ship a Rust CLI example to accelerate application embedding.</p>
-            <figure class="frame">
+            <p>OpenResearchTools-Engine is a local AI runtime built to be embedded directly into applications, with a small footprint and one consistent stack for chat, vision, embeddings, reranking, transcription/diarisation, and PDF-to-markdown workflows.</p>
+            <p>Engine Cluster (experimental) lets you split a runtime across multiple GPUs and machines, and can even mix CUDA, Vulkan, and Metal nodes in the same cluster.</p>
+            <figure class="frame frame--engine">
               <picture>
                 <source srcset="assets/images/engine.webp" type="image/webp">
                 <img src="assets/images/engine.png" alt="OpenResearchtools Engine graphic" loading="lazy" decoding="async">
               </picture>
             </figure>
             <div class="actions" role="group" aria-label="OpenResearchtools Engine links">
-              <a class="btn" href="https://github.com/openresearchtools/engine" target="_blank" rel="noopener">Learn More</a>
+              <a class="btn" href="https://github.com/openresearchtools/engine/releases/download/v1.15/Engine.dmg">MacOS*</a>
+              <a class="btn" href="https://github.com/openresearchtools/engine/releases/download/v1.15/Engine.exe">Windows*</a>
+              <a class="btn btn--muted" href="https://github.com/openresearchtools/engine" target="_blank" rel="noopener">Learn more</a>
             </div>
           </div>
         </article>
 
-        <article class="card" aria-label="Upcoming window">
+        <article class="card" aria-label="PDF Markdown Studio">
           <header class="card__top">
             <span class="dot" aria-hidden="true"></span>
             <span class="dot" aria-hidden="true"></span>
             <span class="dot" aria-hidden="true"></span>
-            <h2 class="card__title">Upcoming Window</h2>
+            <h2 class="card__title">PDF Markdown Studio</h2>
           </header>
           <div class="card__body">
-            <p>This slot is ready for your next launch. Keep the visual system consistent while you add real content.</p>
-            <p class="note">No links are required yet.</p>
+            <figure class="frame">
+              <img src="assets/images/pdf-markdown-studio-demo.png" alt="PDF Markdown Studio interface preview" loading="lazy" decoding="async">
+            </figure>
+            <p>PDF Markdown Studio is a local-first desktop app for converting PDFs and images into clean, editable Markdown—powered by OpenResearchTools-Engine.</p>
+            <p>Use FAST extraction for machine-readable PDFs, switch to VLM conversion for scanned or layout-heavy documents, or let the app fall back automatically; then review and edit the Markdown in a side-by-side workspace before exporting.</p>
+            <div class="actions" role="group" aria-label="PDF Markdown Studio links">
+              <a class="btn" href="https://github.com/openresearchtools/PDF-Markdown-Studio/releases/download/1.0/pdf-markdown-studio-macos-arm64.dmg">MacOS*</a>
+              <a class="btn" href="https://github.com/openresearchtools/PDF-Markdown-Studio/releases/download/1.0/pdf-markdown-studio-windows-x64.exe">Windows*</a>
+              <a class="btn btn--muted" href="https://github.com/openresearchtools/PDF-Markdown-Studio">Learn more</a>
+            </div>
           </div>
         </article>
+      </section>
+
+      <section class="shell notice" aria-label="Unsigned build notice">
+        <div class="notice__learn overlay-host" data-overlay-host>
+          <p class="notice__inline">* Unsigned Build Notice - Openresearch tools are an open-source hobby development effort by the repository owner. We do not currently have funding for full paid code-signing and notarisation pipelines across all platforms/releases. Because of that, operating-system protections or hardened security environments (for example Windows SmartScreen, enterprise endpoint controls, or MacOS Gatekeeper policies) may block unsigned binaries. <a class="inline-link overlay-trigger" href="#unsigned-build-overlay" aria-expanded="false" aria-controls="unsigned-build-overlay">Learn more</a></p>
+          <div class="notice__overlay notice__overlay--up" id="unsigned-build-overlay" role="dialog" aria-label="Unsigned build guidance">
+            <p>If your environment blocks unsigned binaries, the recommended path is:</p>
+            <ul>
+              <li>build this desktop app from source on the target device,</li>
+              <li>build Openresearchtools-Engine from source on the same target device,</li>
+              <li>and use those locally-built artifacts in your deployment.</li>
+            </ul>
+            <h3>Windows (when blocked)</h3>
+            <ul>
+              <li>If SmartScreen shows "Windows protected your PC", use <code>More info -&gt; Run anyway</code> only if your policy allows it.</li>
+              <li>In the app, go to <code>Settings -&gt; Runtime Setup</code> and run: <code>Download/Repair runtime</code>, <code>Unblock unsigned runtime</code>, then <code>Recheck</code>.</li>
+              <li>The Windows unblock script clears Mark-of-the-Web flags in the selected runtime directory by running <code>Unblock-File</code> recursively on runtime files.</li>
+            </ul>
+            <h3>MacOS (when blocked)</h3>
+            <ul>
+              <li>Try <code>Right click -&gt; Open</code> on first launch.</li>
+              <li>If blocked by Gatekeeper, use <code>System Settings -&gt; Privacy &amp; Security -&gt; Open Anyway</code> when available and policy permits.</li>
+              <li>In the app, after runtime install/repair, click <code>Unblock unsigned runtime</code> then <code>Recheck</code>.</li>
+              <li>The MacOS unblock script removes quarantine attributes recursively (<code>xattr -dr com.apple.quarantine</code>) and restores executable bits for runtime binaries/scripts where needed (<code>chmod +x</code> on relevant files).</li>
+            </ul>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer class="footer" aria-label="Site footer">
       <div class="shell footer__inner">
         <small>&copy; 2025 openresearchtools</small>
-        <a class="footer__btn" href="Privacy-Policy.html">Cookie &amp; Privacy Policy</a>
+        <div class="footer__policy overlay-host" data-overlay-host>
+          <a class="btn overlay-trigger" href="#privacy-policy-overlay" aria-expanded="false" aria-controls="privacy-policy-overlay">Cookie &amp; Privacy Policy</a>
+          <div class="notice__overlay notice__overlay--up" id="privacy-policy-overlay" role="dialog" aria-label="Cookie and privacy policy">
+            <p><em>Last updated: 5 March 2026</em></p>
+            <p>At <strong>openresearchtools.com</strong>, your privacy is respected. This site is designed to be simple and does not collect personal data or use tracking technologies.</p>
+            <p><strong>What data we collect</strong></p>
+            <ul>
+              <li><strong>We do not set cookies</strong>.</li>
+              <li><strong>We do not use analytics, tracking scripts, or advertising technologies.</strong></li>
+              <li><strong>We do not collect or process personal information</strong> about visitors.</li>
+            </ul>
+            <p><strong>Hosting and logs</strong></p>
+            <p>This website is hosted using <strong><a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a></strong>, a service provided by GitHub, Inc. When you visit this site, GitHub may collect limited technical information automatically, such as your IP address and basic request data, in order to operate the service securely and reliably.</p>
+            <p>For details, please see the <strong><a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement</a></strong>.</p>
+            <p><strong>Links to other websites</strong></p>
+            <p>This site may contain links to external websites. We are not responsible for the privacy practices or content of those external sites.</p>
+            <p><strong>Your rights</strong></p>
+            <p>Under UK GDPR, you have rights relating to your personal data. Since this site does not collect personal data, there is no information for us to provide or erase. If you have concerns about how GitHub processes technical data when serving this site, please review GitHub's privacy policy.</p>
+          </div>
+        </div>
       </div>
     </footer>
+    <script>
+      (function () {
+        var overlayHosts = Array.prototype.slice.call(document.querySelectorAll("[data-overlay-host]"));
+        if (!overlayHosts.length) {
+          return;
+        }
+
+        function setOpen(host, isOpen) {
+          host.classList.toggle("is-open", isOpen);
+          var trigger = host.querySelector(".overlay-trigger");
+          if (trigger) {
+            trigger.setAttribute("aria-expanded", String(isOpen));
+          }
+        }
+
+        function closeAll(exceptHost) {
+          overlayHosts.forEach(function (host) {
+            if (host !== exceptHost) {
+              setOpen(host, false);
+            }
+          });
+        }
+
+        overlayHosts.forEach(function (host) {
+          var trigger = host.querySelector(".overlay-trigger");
+          if (!trigger) {
+            return;
+          }
+
+          trigger.addEventListener("click", function (event) {
+            if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+              return;
+            }
+
+            event.preventDefault();
+            event.stopPropagation();
+
+            var isOpen = host.classList.contains("is-open");
+            closeAll(host);
+            setOpen(host, !isOpen);
+          });
+        });
+
+        document.addEventListener("click", function (event) {
+          overlayHosts.forEach(function (host) {
+            if (!host.contains(event.target)) {
+              setOpen(host, false);
+            }
+          });
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") {
+            closeAll(null);
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
