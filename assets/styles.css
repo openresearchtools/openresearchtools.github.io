@@ -608,6 +608,14 @@ main {
   font-size: 0.95rem;
 }
 
+.footer__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
 .footer__policy {
   position: relative;
   display: inline-flex;
@@ -647,5 +655,14 @@ main {
     left: auto;
     right: 0;
     width: min(44rem, calc(100vw - 2.8rem));
+  }
+
+  .footer__inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .footer__actions {
+    justify-content: flex-start;
   }
 }
