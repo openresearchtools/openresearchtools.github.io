@@ -59,6 +59,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
 body::before {
   content: "";
   position: fixed;
@@ -489,6 +493,138 @@ main {
   box-shadow: 0 12px 22px -18px rgba(67, 84, 110, 0.22);
 }
 
+.install-dialog {
+  width: min(780px, calc(100% - 2rem));
+  max-height: calc(100svh - 2rem);
+  overflow: auto;
+  border: 1px solid rgba(15, 23, 42, 0.16);
+  border-radius: var(--radius);
+  padding: clamp(1.2rem, 4vw, 2rem);
+  background: #f9fbfd;
+  color: var(--text);
+  box-shadow: 0 34px 90px -36px rgba(15, 23, 42, 0.72);
+}
+
+.install-dialog::backdrop {
+  background: rgba(15, 23, 42, 0.58);
+  backdrop-filter: blur(7px);
+}
+
+.dialog-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.dialog-label {
+  margin: 0 0 0.35rem;
+  color: var(--accent);
+  font-size: 0.76rem;
+  font-weight: 850;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.install-dialog h2 {
+  margin: 0;
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+}
+
+.install-dialog h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+}
+
+.install-dialog p {
+  margin: 0 0 0.75rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.dialog-close {
+  width: 2.5rem;
+  height: 2.5rem;
+  flex: 0 0 auto;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--muted);
+  font: inherit;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.dialog-close:hover,
+.dialog-close:focus-visible {
+  color: var(--text);
+  border-color: rgba(15, 120, 148, 0.32);
+}
+
+.install-option + .install-option {
+  margin-top: 1.4rem;
+}
+
+.code-block {
+  position: relative;
+}
+
+.code-block pre {
+  margin: 0;
+  overflow-x: auto;
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  border-radius: 12px;
+  padding: 1rem 4.5rem 1rem 1rem;
+  background: #101c2d;
+  color: #f4fbff;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.code-block pre code {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: inherit;
+}
+
+.copy-button {
+  position: absolute;
+  top: 0.55rem;
+  right: 0.55rem;
+  z-index: 1;
+  min-width: 3.5rem;
+  border: 1px solid rgba(110, 212, 227, 0.28);
+  border-radius: 8px;
+  padding: 0.36rem 0.56rem;
+  background: #193047;
+  color: #dff8fc;
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.copy-button:hover,
+.copy-button:focus-visible,
+.copy-button.copied {
+  border-color: var(--accent-c);
+  color: #fff;
+}
+
+.dialog-note {
+  margin-top: 1.4rem !important;
+}
+
 .note {
   color: var(--muted-2);
   font-style: italic;
@@ -695,5 +831,10 @@ main {
 
   .footer__actions {
     justify-content: flex-start;
+  }
+
+  .install-dialog {
+    width: calc(100% - 1rem);
+    max-height: calc(100svh - 1rem);
   }
 }

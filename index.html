@@ -55,22 +55,23 @@
           </div>
         </article>
 
-        <article class="card" aria-label="Transcribe Offline v2.0">
+        <article class="card" aria-label="Transcribe Offline v2.1">
           <header class="card__top">
             <span class="dot" aria-hidden="true"></span>
             <span class="dot" aria-hidden="true"></span>
             <span class="dot" aria-hidden="true"></span>
-            <h2 class="card__title">Transcribe Offline v2.0</h2>
+            <h2 class="card__title">Transcribe Offline v2.1</h2>
           </header>
           <div class="card__body">
             <figure class="frame">
               <img src="assets/images/transcribeoffline-demo.png" alt="Transcribe Offline interface preview">
             </figure>
             <p>Transcribe Offline is a free, open-source desktop app that runs entirely on your own hardware for both file transcription and true live transcription, including live speaker diarisation and subtitle export—no cloud uploads or per-minute fees. It supports GPU acceleration on MacOS* and Windows*, but still runs on lower-end devices.</p>
-            <p>Download Transcribe Offline v2.0 for:</p>
+            <p>Install or download Transcribe Offline v2.1 for:</p>
             <div class="actions" role="group" aria-label="Transcribe Offline downloads">
-              <a class="btn" href="https://github.com/openresearchtools/transcribeoffline/releases/download/2.0/transcribe-offline-macos-arm64.dmg">MacOS*</a>
-              <a class="btn" href="https://github.com/openresearchtools/transcribeoffline/releases/download/2.0/Transcribe-Offline-windows-x64.exe">Windows*</a>
+              <button class="btn" type="button" data-open-dialog="transcribe-linux-dialog">Linux · Debian/Ubuntu</button>
+              <a class="btn" href="https://github.com/openresearchtools/transcribeoffline/releases/download/2.1/transcribe-offline-macos-arm64.dmg">MacOS*</a>
+              <a class="btn" href="https://github.com/openresearchtools/transcribeoffline/releases/download/2.1/Transcribe-Offline-windows-x64.exe">Windows*</a>
               <a class="btn btn--muted" href="https://github.com/openresearchtools/transcribeoffline">Learn more</a>
             </div>
           </div>
@@ -112,8 +113,9 @@
             <p>PDF Markdown Studio is a local-first desktop app for converting PDFs and images into clean, editable Markdown—powered by OpenResearchTools-Engine.</p>
             <p>Use FAST extraction for machine-readable PDFs, switch to VLM conversion for scanned or layout-heavy documents, or let the app fall back automatically; then review and edit the Markdown in a side-by-side workspace before exporting.</p>
             <div class="actions" role="group" aria-label="PDF Markdown Studio links">
-              <a class="btn" href="https://github.com/openresearchtools/PDF-Markdown-Studio/releases/download/1.0/pdf-markdown-studio-macos-arm64.dmg">MacOS*</a>
-              <a class="btn" href="https://github.com/openresearchtools/PDF-Markdown-Studio/releases/download/1.0/pdf-markdown-studio-windows-x64.exe">Windows*</a>
+              <button class="btn" type="button" data-open-dialog="pdf-linux-dialog">Linux · Debian/Ubuntu</button>
+              <a class="btn" href="https://github.com/openresearchtools/PDF-Markdown-Studio/releases/download/1.1.1/pdf-markdown-studio-macos-arm64.dmg">MacOS*</a>
+              <a class="btn" href="https://github.com/openresearchtools/PDF-Markdown-Studio/releases/download/1.1.1/pdf-markdown-studio-windows-x64.exe">Windows*</a>
               <a class="btn btn--muted" href="https://github.com/openresearchtools/PDF-Markdown-Studio">Learn more</a>
             </div>
           </div>
@@ -147,6 +149,64 @@
         </div>
       </section>
     </main>
+
+    <dialog class="install-dialog" id="transcribe-linux-dialog" aria-labelledby="transcribe-linux-title">
+      <div class="dialog-heading">
+        <div>
+          <p class="dialog-label">Debian 13+ · Ubuntu 24.04/26.04+ · amd64</p>
+          <h2 id="transcribe-linux-title">Install Transcribe Offline</h2>
+        </div>
+        <button class="dialog-close" type="button" data-close-dialog aria-label="Close Transcribe Offline install instructions">&times;</button>
+      </div>
+
+      <section class="install-option">
+        <h3>First Open Research Tools install</h3>
+        <p>Add the signed repository and install the application with one command.</p>
+        <div class="code-block">
+          <button class="copy-button" type="button" data-copy="transcribe-first-install">Copy</button>
+          <pre><code id="transcribe-first-install">wget -qO /tmp/openresearchtools-archive-keyring.deb https://apt.openresearchtools.com/apt/releases/download/repo/openresearchtools-archive-keyring.deb &amp;&amp; sudo apt install -y /tmp/openresearchtools-archive-keyring.deb &amp;&amp; sudo apt update &amp;&amp; sudo apt install -y transcribe-offline</code></pre>
+        </div>
+      </section>
+
+      <section class="install-option">
+        <h3>Repository already configured</h3>
+        <p>If another Open Research Tools package has already added the repository:</p>
+        <div class="code-block">
+          <button class="copy-button" type="button" data-copy="transcribe-apt-install">Copy</button>
+          <pre><code id="transcribe-apt-install">sudo apt install transcribe-offline</code></pre>
+        </div>
+      </section>
+      <p class="dialog-note">APT installs the required Vulkan and CUDA Engine packages automatically.</p>
+    </dialog>
+
+    <dialog class="install-dialog" id="pdf-linux-dialog" aria-labelledby="pdf-linux-title">
+      <div class="dialog-heading">
+        <div>
+          <p class="dialog-label">Debian 13+ · Ubuntu 24.04/26.04+ · amd64</p>
+          <h2 id="pdf-linux-title">Install PDF Markdown Studio</h2>
+        </div>
+        <button class="dialog-close" type="button" data-close-dialog aria-label="Close PDF Markdown Studio install instructions">&times;</button>
+      </div>
+
+      <section class="install-option">
+        <h3>First Open Research Tools install</h3>
+        <p>Add the signed repository and install the application with one command.</p>
+        <div class="code-block">
+          <button class="copy-button" type="button" data-copy="pdf-first-install">Copy</button>
+          <pre><code id="pdf-first-install">wget -qO /tmp/openresearchtools-archive-keyring.deb https://apt.openresearchtools.com/apt/releases/download/repo/openresearchtools-archive-keyring.deb &amp;&amp; sudo apt install -y /tmp/openresearchtools-archive-keyring.deb &amp;&amp; sudo apt update &amp;&amp; sudo apt install -y pdf-markdown-studio</code></pre>
+        </div>
+      </section>
+
+      <section class="install-option">
+        <h3>Repository already configured</h3>
+        <p>If another Open Research Tools package has already added the repository:</p>
+        <div class="code-block">
+          <button class="copy-button" type="button" data-copy="pdf-apt-install">Copy</button>
+          <pre><code id="pdf-apt-install">sudo apt install pdf-markdown-studio</code></pre>
+        </div>
+      </section>
+      <p class="dialog-note">APT installs the required Vulkan and CUDA Engine packages automatically.</p>
+    </dialog>
 
     <footer class="footer" aria-label="Site footer">
       <div class="shell footer__inner">
@@ -230,6 +290,74 @@
           if (event.key === "Escape") {
             closeAll(null);
           }
+        });
+      })();
+
+      (function () {
+        var dialogs = new Map(
+          Array.prototype.map.call(document.querySelectorAll("dialog"), function (dialog) {
+            return [dialog.id, dialog];
+          })
+        );
+
+        document.querySelectorAll("[data-open-dialog]").forEach(function (button) {
+          button.addEventListener("click", function () {
+            var dialog = dialogs.get(button.dataset.openDialog);
+            if (dialog) {
+              dialog.showModal();
+            }
+          });
+        });
+
+        document.querySelectorAll("[data-close-dialog]").forEach(function (button) {
+          button.addEventListener("click", function () {
+            button.closest("dialog").close();
+          });
+        });
+
+        dialogs.forEach(function (dialog) {
+          dialog.addEventListener("click", function (event) {
+            if (event.target === dialog) {
+              dialog.close();
+            }
+          });
+        });
+
+        function copyText(text) {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            return navigator.clipboard.writeText(text);
+          }
+
+          var field = document.createElement("textarea");
+          field.value = text;
+          field.readOnly = true;
+          field.style.position = "fixed";
+          field.style.opacity = "0";
+          document.body.appendChild(field);
+          field.select();
+          var copied = document.execCommand("copy");
+          field.remove();
+          return copied ? Promise.resolve() : Promise.reject(new Error("Copy failed"));
+        }
+
+        document.querySelectorAll("[data-copy]").forEach(function (button) {
+          button.addEventListener("click", function () {
+            var code = document.getElementById(button.dataset.copy);
+            copyText(code.textContent.trim()).then(function () {
+              button.textContent = "Copied";
+              button.classList.add("copied");
+              window.setTimeout(function () {
+                button.textContent = "Copy";
+                button.classList.remove("copied");
+              }, 1600);
+            }).catch(function () {
+              var range = document.createRange();
+              range.selectNodeContents(code);
+              window.getSelection().removeAllRanges();
+              window.getSelection().addRange(range);
+              button.textContent = "Selected";
+            });
+          });
         });
       })();
     </script>
