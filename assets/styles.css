@@ -106,6 +106,7 @@ a:focus-visible {
 }
 
 .banner__inner {
+  position: relative;
   min-height: 78px;
   display: flex;
   align-items: center;
@@ -130,6 +131,16 @@ a:focus-visible {
   align-items: center;
   gap: 0.65rem;
   margin-left: auto;
+}
+
+.banner-contact.overlay-host {
+  position: static;
+}
+
+.banner-contact .notice__overlay {
+  left: auto;
+  right: 0;
+  width: min(24rem, 100%);
 }
 
 .banner-link {
